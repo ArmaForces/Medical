@@ -22,6 +22,15 @@ The mod is on the same foundation as the ACE3 mod, using its framework, systems,
 
 Huge appreciation and thanks to [ACE3 Team](http://ace3mod.com/team.html) for their open-source nature and permission to use their systems.
 
+# Overwiew
+
+- Decreased treatment times
+  - Bandaging time / 2
+  - Applying Tourniquet 7 -> 2.5 s
+  - Removing Tourniquet 7 -> 1.5 s
+  - Splint 7 -> 5 s
+  - IV 12 -> 5 s
+
 ## Setup
 
 ### Requirements
