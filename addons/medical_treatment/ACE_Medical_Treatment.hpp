@@ -56,45 +56,18 @@ class ACE_ADDON(medical_treatment) {
             };
         };
 
-        class FieldDressing {
-            // How effect is the bandage for treating one wounds type injury
-            effectiveness = 1;
-            // What is the chance and delays (in seconds) of the treated default injury reopening
-            reopeningChance = 0.1;
-            reopeningMinDelay = 120;
-            reopeningMaxDelay = 200;
-
+        class FieldDressing: BasicBandage {
             // Super efficiency
-            class Abrasion {
-                effectiveness = 10;
-                reopeningChance = 0.1;
-                reopeningMinDelay = 600;
-                reopeningMaxDelay = 1800;
-            };
-            class AbrasionMinor: Abrasion {};
-            class AbrasionMedium: Abrasion {
-                effectiveness = 8;
-                reopeningChance = 0.15;
-            };
-            class AbrasionLarge: Abrasion {
-                effectiveness = 7;
-                reopeningChance = 0.2;
-            };
+            class Abrasion: SuperEff {};
+            class AbrasionMinor: SuperEffMinor {};
+            class AbrasionMedium: SuperEffMedium {};
+            class AbrasionLarge: SuperEffLarge {};
 
             // Standard efficiency
-            class Avulsion: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.4;
-                reopeningMinDelay = 300;
-                reopeningMaxDelay = 600;
-            };
-            class AvulsionMinor: Avulsion {};
-            class AvulsionMedium: Avulsion {
-                effectiveness = 3;
-            };
-            class AvulsionLarge: Avulsion {
-                effectiveness = 2;
-            };
+            class Avulsion: StandardEff {};
+            class AvulsionMinor: StandardEffMinor {};
+            class AvulsionMedium: StandardEffMedium {};
+            class AvulsionLarge: StandardEffLarge {};
 
             // Standard efficiency
             class Contusion: Abrasion {
@@ -108,245 +81,98 @@ class ACE_ADDON(medical_treatment) {
             class ContusionLarge: Contusion {};
 
             // Standard efficiency
-            class Crush: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.2;
-                reopeningMinDelay = 200;
-                reopeningMaxDelay = 1000;
-            };
-            class CrushMinor: Crush {};
-            class CrushMedium: Crush {
-                effectiveness = 3;
-                reopeningChance = 0.25;
-            };
-            class CrushLarge: Crush {
-                effectiveness = 2;
-                reopeningChance = 0.3;
-            };
+            class Crush: StandardEff {};
+            class CrushMinor: StandardEffMinor {};
+            class CrushMedium: StandardEffMedium {};
+            class CrushLarge: StandardEffLarge {};
 
             // Super efficiency
-            class Cut: Abrasion {
-                effectiveness = 10;
-                reopeningChance = 0.1;
-                reopeningMinDelay = 600;
-                reopeningMaxDelay = 1800;
-            };
-            class CutMinor: Cut {};
-            class CutMedium: Cut {
-                effectiveness = 9;
-                reopeningChance = 0.2;
-            };
-            class CutLarge: Cut {
-                effectiveness = 8;
-                reopeningChance = 0.3;
-            };
+            class Cut: SuperEff {};
+            class CutMinor: SuperEffMinor {};
+            class CutMedium: SuperEffMedium {};
+            class CutLarge: SuperEffLarge {};
 
             // Super efficiency
-            class Laceration: Abrasion {
-                effectiveness = 10;
-                reopeningChance = 0.2;
-                reopeningMinDelay = 600;
-                reopeningMaxDelay = 1800;
-            };
-            class LacerationMinor: Laceration {};
-            class LacerationMedium: Laceration {
-                effectiveness = 9;
-                reopeningChance = 0.3;
-            };
-            class LacerationLarge: Laceration {
-                effectiveness = 8;
-                reopeningChance = 0.4;
-            };
+            class Laceration: SuperEff {};
+            class LacerationMinor: SuperEffMinor {};
+            class LacerationMedium: SuperEffMedium {};
+            class LacerationLarge: SuperEffLarge {};
 
             // Increased efficiency
-            class VelocityWound: Abrasion {
-                effectiveness = 6;
-                reopeningChance = 0.6;
-                reopeningMinDelay = 600;
-                reopeningMaxDelay = 1000;
-            };
-            class VelocityWoundMinor: VelocityWound {};
-            class VelocityWoundMedium: VelocityWound {
-                effectiveness = 5;
-            };
-            class VelocityWoundLarge: VelocityWound {
-                effectiveness = 4;
-            };
+            class VelocityWound: IncreasedEff {};
+            class VelocityWoundMinor: IncreasedEffMinor {};
+            class VelocityWoundMedium: IncreasedEffMedium {};
+            class VelocityWoundLarge: IncreasedEffLarge {};
 
             // Increased efficiency
-            class PunctureWound: Abrasion {
-                effectiveness = 6;
-                reopeningChance = 0.4;
-                reopeningMinDelay = 360;
-                reopeningMaxDelay = 900;
-            };
-            class PunctureWoundMinor: PunctureWound {};
-            class PunctureWoundMedium: PunctureWound {
-                effectiveness = 5;
-            };
-            class PunctureWoundLarge: PunctureWound {
-                effectiveness = 4;
-            };
+            class PunctureWound: IncreasedEff {};
+            class PunctureWoundMinor: IncreasedEffMinor {};
+            class PunctureWoundMedium: IncreasedEffMedium {};
+            class PunctureWoundLarge: IncreasedEffLarge {};
         };
 
-        class PackingBandage: fieldDressing {
+        class PackingBandage: BasicBandage {
             // Standard efficiency
-            class Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.5;
-                reopeningMinDelay = 800;
-                reopeningMaxDelay = 1500;
-            };
-            class AbrasionMinor: Abrasion {};
-            class AbrasionMedium: Abrasion {
-                effectiveness = 3;
-                reopeningChance = 0.6;
-            };
-            class AbrasionLarge: Abrasion {
-                effectiveness = 2;
-                reopeningChance = 0.7;
-            };
+            class Abrasion: StandardEff {};
+            class AbrasionMinor: StandardEffMinor {};
+            class AbrasionMedium: StandardEffMedium {};
+            class AbrasionLarge: StandardEffLarge {};
 
             // Standard efficiency
-            class Avulsion: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.5;
-                reopeningMinDelay = 1000;
-                reopeningMaxDelay = 1600;
-            };
-            class AvulsionMinor: Avulsion {};
-            class AvulsionMedium: Avulsion {
-                effectiveness = 3;
-            };
-            class AvulsionLarge: Avulsion {
-                effectiveness = 2;
-            };
+            class Avulsion: StandardEff {};
+            class AvulsionMinor: StandardEffMinor {};
+            class AvulsionMedium: StandardEffMedium {};
+            class AvulsionLarge: StandardEffLarge {};
 
             // Standard efficiency
-            class Contusion: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0;
-                reopeningMinDelay = 0;
-                reopeningMaxDelay = 0;
-            };
-            class ContusionMinor: Contusion {};
-            class ContusionMedium: Contusion {};
-            class ContusionLarge: Contusion {};
+            class Contusion: StandardEff {};
+            class ContusionMinor: StandardEffMinor {};
+            class ContusionMedium: StandardEffMedium {};
+            class ContusionLarge: StandardEffLarge {};
 
             // Standard efficiency
-            class Crush: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.4;
-                reopeningMinDelay = 600;
-                reopeningMaxDelay = 1000;
-            };
-            class CrushMinor: Crush {};
-            class CrushMedium: Crush {
-                effectiveness = 3;
-                reopeningChance = 0.5;
-            };
-            class CrushLarge: Crush {
-                effectiveness = 2;
-                reopeningChance = 0.6;
-            };
+            class Crush: StandardEff {};
+            class CrushMinor: StandardEffMinor {};
+            class CrushMedium: StandardEffMedium {};
+            class CrushLarge: StandardEffLarge {};
 
             // Standard efficiency
-            class Cut: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.4;
-                reopeningMinDelay = 700;
-                reopeningMaxDelay = 1000;
-            };
-            class CutMinor: Cut {};
-            class CutMedium: Cut {
-                effectiveness = 3;
-                reopeningChance = 0.5;
-            };
-            class CutLarge: Cut {
-                effectiveness = 1;
-                reopeningChance = 0.6;
-            };
+            class Cut: StandardEff {};
+            class CutMinor: StandardEffMinor {};
+            class CutMedium: StandardEffMedium {};
+            class CutLarge: StandardEffLarge {};
 
             // Standard efficiency
-            class Laceration: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.6;
-                reopeningMinDelay = 500;
-                reopeningMaxDelay = 2000;
-            };
-            class LacerationMinor: Laceration {};
-            class LacerationMedium: Laceration {
-                effectiveness = 3;
-                reopeningChance = 0.8;
-            };
-            class LacerationLarge: Laceration {
-                effectiveness = 2;
-                reopeningChance = 0.9;
-            };
+            class Laceration: StandardEff {};
+            class LacerationMinor: StandardEffMinor {};
+            class LacerationMedium: StandardEffMedium {};
+            class LacerationLarge: StandardEffLarge {};
 
             // Super efficiency
-            class VelocityWound: Abrasion {
-                effectiveness = 10;
-                reopeningChance = 1;
-                reopeningMinDelay = 800;
-                reopeningMaxDelay = 2000;
-            };
-            class VelocityWoundMinor: VelocityWound {};
-            class VelocityWoundMedium: VelocityWound {
-                effectiveness = 9;
-            };
-            class VelocityWoundLarge: VelocityWound {
-                effectiveness = 8;
-            };
+            class VelocityWound: SuperEff {};
+            class VelocityWoundMinor: SuperEffMinor {};
+            class VelocityWoundMedium: SuperEffMedium {};
+            class VelocityWoundLarge: SuperEffLarge {};
 
             // Super efficiency
-            class PunctureWound: Abrasion {
-                effectiveness = 10;
-                reopeningChance = 0.3;
-                reopeningMinDelay = 1000;
-                reopeningMaxDelay = 3000;
-            };
-            class PunctureWoundMinor: PunctureWound {};
-            class PunctureWoundMedium: PunctureWound {
-                effectiveness = 9;
-            };
-            class PunctureWoundLarge: PunctureWound {
-                effectiveness = 8;
-            };
+            class PunctureWound: SuperEff {};
+            class PunctureWoundMinor: SuperEffMinor {};
+            class PunctureWoundMedium: SuperEffMedium {};
+            class PunctureWoundLarge: SuperEffLarge {};
         };
 
-        class ElasticBandage: fieldDressing {
+        class ElasticBandage: BasicBandage {
             // Standard efficiency
-            class Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.5;
-                reopeningMinDelay = 300;
-                reopeningMaxDelay = 600;
-            };
-            class AbrasionMinor: Abrasion {};
-            class AbrasionMedium: Abrasion {
-                effectiveness = 3;
-                reopeningChance = 0.6;
-            };
-            class AbrasionLarge: Abrasion {
-                effectiveness = 2;
-                reopeningChance = 0.7;
-            };
+            class Abrasion: StandardEff {};
+            class AbrasionMinor: StandardEffMinor {};
+            class AbrasionMedium: StandardEffMedium {};
+            class AbrasionLarge: StandardEffLarge {};
 
             // Super efficiency
-            class Avulsion: Abrasion {
-                effectiveness = 10;
-                reopeningChance = 0.1;
-                reopeningMinDelay = 1000;
-                reopeningMaxDelay = 1600;
-            };
-            class AvulsionMinor: Avulsion {};
-            class AvulsionMedium: Avulsion {
-                effectiveness = 9;
-            };
-            class AvulsionLarge: Avulsion {
-                effectiveness = 8;
-            };
+            class Avulsion: SuperEff {};
+            class AvulsionMinor: SuperEffMinor {};
+            class AvulsionMedium: SuperEffMedium {};
+            class AvulsionLarge: SuperEffLarge {};
 
             // Super efficiency
             class Contusion: Abrasion {
@@ -360,119 +186,48 @@ class ACE_ADDON(medical_treatment) {
             class ContusionLarge: Contusion {};
 
             // Super efficiency
-            class Crush: Abrasion {
-                effectiveness = 10;
-                reopeningChance = 0.1;
-                reopeningMinDelay = 600;
-                reopeningMaxDelay = 1000;
-            };
-            class CrushMinor: Crush {};
-            class CrushMedium: Crush {
-                effectiveness = 9;
-                reopeningChance = 0.15;
-            };
-            class CrushLarge: Crush {
-                effectiveness = 8;
-                reopeningChance = 0.2;
-            };
+            class Crush: SuperEff {};
+            class CrushMinor: SuperEffMinor {};
+            class CrushMedium: SuperEffMedium {};
+            class CrushLarge: SuperEffLarge {};
 
             // Standard efficiency
-            class Cut: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.5;
-                reopeningMinDelay = 300;
-                reopeningMaxDelay = 600;
-            };
-            class CutMinor: Cut {};
-            class CutMedium: Cut {
-                effectiveness = 3;
-                reopeningChance = 0.6;
-            };
-            class CutLarge: Cut {
-                effectiveness = 2;
-                reopeningChance = 0.7;
-            };
+            class Cut: StandardEff {};
+            class CutMinor: StandardEffMinor {};
+            class CutMedium: StandardEffMedium {};
+            class CutLarge: StandardEffLarge {};
 
             // Standard efficiency
-            class Laceration: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.6;
-                reopeningMinDelay = 300;
-                reopeningMaxDelay = 600;
-            };
-            class LacerationMinor: Laceration {};
-            class LacerationMedium: Laceration {
-                effectiveness = 3;
-                reopeningChance = 0.7;
-            };
-            class LacerationLarge: Laceration {
-                effectiveness = 2;
-                reopeningChance = 0.8;
-            };
+            class Laceration: StandardEff {};
+            class LacerationMinor: StandardEffMinor {};
+            class LacerationMedium: StandardEffMedium {};
+            class LacerationLarge: StandardEffLarge {};
 
             // Increased efficiency
-            class VelocityWound: Abrasion {
-                effectiveness = 6;
-                reopeningChance = 0.4;
-                reopeningMinDelay = 600;
-                reopeningMaxDelay = 1000;
-            };
-            class VelocityWoundMinor: VelocityWound {};
-            class VelocityWoundMedium: VelocityWound {
-                effectiveness = 5;
-            };
-            class VelocityWoundLarge: VelocityWound {
-                effectiveness = 4;
-            };
+            class VelocityWound: IncreasedEff {};
+            class VelocityWoundMinor: IncreasedEffMinor {};
+            class VelocityWoundMedium: IncreasedEffMedium {};
+            class VelocityWoundLarge: IncreasedEffLarge {};
 
             // Increased efficiency
-            class PunctureWound: Abrasion {
-                effectiveness = 6;
-                reopeningChance = 0.4;
-                reopeningMinDelay = 360;
-                reopeningMaxDelay = 900;
-            };
-            class PunctureWoundMinor: PunctureWound {};
-            class PunctureWoundMedium: PunctureWound {
-                effectiveness = 5;
-            };
-            class PunctureWoundLarge: PunctureWound {
-                effectiveness = 4;
-            };
+            class PunctureWound: IncreasedEff {};
+            class PunctureWoundMinor: IncreasedEffMinor {};
+            class PunctureWoundMedium: IncreasedEffMedium {};
+            class PunctureWoundLarge: IncreasedEffLarge {};
         };
 
-        class QuikClot: fieldDressing {
+        class QuikClot: BasicBandage {
             // Standard efficiency
-            class Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.3;
-                reopeningMinDelay = 800;
-                reopeningMaxDelay = 1500;
-            };
-            class AbrasionMinor: Abrasion {};
-            class AbrasionMedium: Abrasion {
-                effectiveness = 3;
-                reopeningChance = 0.4;
-            };
-            class AbrasionLarge: Abrasion {
-                effectiveness = 2;
-                reopeningChance = 0.5;
-            };
+            class Abrasion: StandardEff {};
+            class AbrasionMinor: StandardEffMinor {};
+            class AbrasionMedium: StandardEffMedium {};
+            class AbrasionLarge: StandardEffLarge {};
 
             // Standard efficiency
-            class Avulsion: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.2;
-                reopeningMinDelay = 1000;
-                reopeningMaxDelay = 1600;
-            };
-            class AvulsionMinor: Avulsion {};
-            class AvulsionMedium: Avulsion {
-                effectiveness = 3;
-            };
-            class AvulsionLarge: Avulsion {
-                effectiveness = 2;
-            };
+            class Avulsion: StandardEff {};
+            class AvulsionMinor: StandardEffMinor {};
+            class AvulsionMedium: StandardEffMedium {};
+            class AvulsionLarge: StandardEffLarge {};
 
             // Standard efficiency
             class Contusion: Abrasion {
@@ -486,79 +241,34 @@ class ACE_ADDON(medical_treatment) {
             class ContusionLarge: Contusion {};
 
             // Standard efficiency
-            class Crush: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.5;
-                reopeningMinDelay = 600;
-                reopeningMaxDelay = 1000;
-            };
-            class CrushMinor: Crush {};
-            class CrushMedium: Crush {
-                effectiveness = 3;
-            };
-            class CrushLarge: Crush {
-                effectiveness = 2;
-            };
+            class Crush: StandardEff {};
+            class CrushMinor: StandardEffMinor {};
+            class CrushMedium: StandardEffMedium {};
+            class CrushLarge: StandardEffLarge {};
 
             // Standard efficiency
-            class Cut: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.2;
-                reopeningMinDelay = 700;
-                reopeningMaxDelay = 1000;
-            };
-            class CutMinor: Cut {};
-            class CutMedium: Cut {
-                effectiveness = 3;
-            };
-            class CutLarge: Cut {
-                effectiveness = 2;
-            };
+            class Cut: StandardEff {};
+            class CutMinor: StandardEffMinor {};
+            class CutMedium: StandardEffMedium {};
+            class CutLarge: StandardEffLarge {};
 
             // Standard efficiency
-            class Laceration: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.4;
-                reopeningMinDelay = 500;
-                reopeningMaxDelay = 2000;
-            };
-            class LacerationMinor: Laceration {};
-            class LacerationMedium: Laceration {
-                effectiveness = 3;
-            };
-            class LacerationLarge: Laceration {
-                effectiveness = 2;
-            };
+            class Laceration: StandardEff {};
+            class LacerationMinor: StandardEffMinor {};
+            class LacerationMedium: StandardEffMedium {};
+            class LacerationLarge: StandardEffLarge {};
 
             // Super efficiency
-            class VelocityWound: Abrasion {
-                effectiveness = 10;
-                reopeningChance = 0.3;
-                reopeningMinDelay = 1000;
-                reopeningMaxDelay = 3000;
-            };
-            class VelocityWoundMinor: VelocityWound {};
-            class VelocityWoundMedium: VelocityWound {
-                effectiveness = 9;
-            };
-            class VelocityWoundLarge: VelocityWound {
-                effectiveness = 8;
-            };
+            class VelocityWound: SuperEff {};
+            class VelocityWoundMinor: SuperEffMinor {};
+            class VelocityWoundMedium: SuperEffMedium {};
+            class VelocityWoundLarge: SuperEffLarge {};
 
             // Super efficiency
-            class PunctureWound: Abrasion {
-                effectiveness = 10;
-                reopeningChance = 0.1;
-                reopeningMinDelay = 1000;
-                reopeningMaxDelay = 3000;
-            };
-            class PunctureWoundMinor: PunctureWound {};
-            class PunctureWoundMedium: PunctureWound {
-                effectiveness = 9;
-            };
-            class PunctureWoundLarge: PunctureWound {
-                effectiveness = 8;
-            };
+            class PunctureWound: SuperEff {};
+            class PunctureWoundMinor: SuperEffMinor {};
+            class PunctureWoundMedium: SuperEffMedium {};
+            class PunctureWoundLarge: SuperEffLarge {};
         };
     };
 
