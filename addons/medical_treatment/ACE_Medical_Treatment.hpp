@@ -54,23 +54,19 @@ class ACE_ADDON(medical_treatment) {
             class StandardEffLarge: StandardEff {
                 effectiveness = 2;
             };
-        };
 
-        class FieldDressing: BasicBandage {
-            // Super efficiency
-            class Abrasion: SuperEff {};
-            class AbrasionMinor: SuperEffMinor {};
-            class AbrasionMedium: SuperEffMedium {};
-            class AbrasionLarge: SuperEffLarge {};
+            // All wounds with standard efficiency
+            class Abrasion: StandardEff {};
+            class AbrasionMinor: StandardEffMinor {};
+            class AbrasionMedium: StandardEffMedium {};
+            class AbrasionLarge: StandardEffLarge {};
 
-            // Standard efficiency
             class Avulsion: StandardEff {};
             class AvulsionMinor: StandardEffMinor {};
             class AvulsionMedium: StandardEffMedium {};
             class AvulsionLarge: StandardEffLarge {};
 
-            // Standard efficiency
-            class Contusion: Abrasion {
+            class Contusion: Standard {
                 effectiveness = 4;
                 reopeningChance = 0;
                 reopeningMinDelay = 0;
@@ -80,11 +76,38 @@ class ACE_ADDON(medical_treatment) {
             class ContusionMedium: Contusion {};
             class ContusionLarge: Contusion {};
 
-            // Standard efficiency
             class Crush: StandardEff {};
             class CrushMinor: StandardEffMinor {};
             class CrushMedium: StandardEffMedium {};
             class CrushLarge: StandardEffLarge {};
+
+            class Cut: StandardEff {};
+            class CutMinor: StandardEffMinor {};
+            class CutMedium: StandardEffMedium {};
+            class CutLarge: StandardEffLarge {};
+
+            class Laceration: StandardEff {};
+            class LacerationMinor: StandardEffMinor {};
+            class LacerationMedium: StandardEffMedium {};
+            class LacerationLarge: StandardEffLarge {};
+
+            class VelocityWound: StandardEff {};
+            class VelocityWoundMinor: StandardEffMinor {};
+            class VelocityWoundMedium: StandardEffMedium {};
+            class VelocityWoundLarge: StandardEffLarge {};
+
+            class PunctureWound: StandardEff {};
+            class PunctureWoundMinor: StandardEffMinor {};
+            class PunctureWoundMedium: StandardEffMedium {};
+            class PunctureWoundLarge: StandardEffLarge {};
+        };
+
+        class FieldDressing: BasicBandage {
+            // Super efficiency
+            class Abrasion: SuperEff {};
+            class AbrasionMinor: SuperEffMinor {};
+            class AbrasionMedium: SuperEffMedium {};
+            class AbrasionLarge: SuperEffLarge {};
 
             // Super efficiency
             class Cut: SuperEff {};
@@ -112,42 +135,6 @@ class ACE_ADDON(medical_treatment) {
         };
 
         class PackingBandage: BasicBandage {
-            // Standard efficiency
-            class Abrasion: StandardEff {};
-            class AbrasionMinor: StandardEffMinor {};
-            class AbrasionMedium: StandardEffMedium {};
-            class AbrasionLarge: StandardEffLarge {};
-
-            // Standard efficiency
-            class Avulsion: StandardEff {};
-            class AvulsionMinor: StandardEffMinor {};
-            class AvulsionMedium: StandardEffMedium {};
-            class AvulsionLarge: StandardEffLarge {};
-
-            // Standard efficiency
-            class Contusion: StandardEff {};
-            class ContusionMinor: StandardEffMinor {};
-            class ContusionMedium: StandardEffMedium {};
-            class ContusionLarge: StandardEffLarge {};
-
-            // Standard efficiency
-            class Crush: StandardEff {};
-            class CrushMinor: StandardEffMinor {};
-            class CrushMedium: StandardEffMedium {};
-            class CrushLarge: StandardEffLarge {};
-
-            // Standard efficiency
-            class Cut: StandardEff {};
-            class CutMinor: StandardEffMinor {};
-            class CutMedium: StandardEffMedium {};
-            class CutLarge: StandardEffLarge {};
-
-            // Standard efficiency
-            class Laceration: StandardEff {};
-            class LacerationMinor: StandardEffMinor {};
-            class LacerationMedium: StandardEffMedium {};
-            class LacerationLarge: StandardEffLarge {};
-
             // Super efficiency
             class VelocityWound: SuperEff {};
             class VelocityWoundMinor: SuperEffMinor {};
@@ -162,12 +149,6 @@ class ACE_ADDON(medical_treatment) {
         };
 
         class ElasticBandage: BasicBandage {
-            // Standard efficiency
-            class Abrasion: StandardEff {};
-            class AbrasionMinor: StandardEffMinor {};
-            class AbrasionMedium: StandardEffMedium {};
-            class AbrasionLarge: StandardEffLarge {};
-
             // Super efficiency
             class Avulsion: SuperEff {};
             class AvulsionMinor: SuperEffMinor {};
@@ -191,18 +172,6 @@ class ACE_ADDON(medical_treatment) {
             class CrushMedium: SuperEffMedium {};
             class CrushLarge: SuperEffLarge {};
 
-            // Standard efficiency
-            class Cut: StandardEff {};
-            class CutMinor: StandardEffMinor {};
-            class CutMedium: StandardEffMedium {};
-            class CutLarge: StandardEffLarge {};
-
-            // Standard efficiency
-            class Laceration: StandardEff {};
-            class LacerationMinor: StandardEffMinor {};
-            class LacerationMedium: StandardEffMedium {};
-            class LacerationLarge: StandardEffLarge {};
-
             // Increased efficiency
             class VelocityWound: IncreasedEff {};
             class VelocityWoundMinor: IncreasedEffMinor {};
@@ -217,47 +186,6 @@ class ACE_ADDON(medical_treatment) {
         };
 
         class QuikClot: BasicBandage {
-            // Standard efficiency
-            class Abrasion: StandardEff {};
-            class AbrasionMinor: StandardEffMinor {};
-            class AbrasionMedium: StandardEffMedium {};
-            class AbrasionLarge: StandardEffLarge {};
-
-            // Standard efficiency
-            class Avulsion: StandardEff {};
-            class AvulsionMinor: StandardEffMinor {};
-            class AvulsionMedium: StandardEffMedium {};
-            class AvulsionLarge: StandardEffLarge {};
-
-            // Standard efficiency
-            class Contusion: Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0;
-                reopeningMinDelay = 0;
-                reopeningMaxDelay = 0;
-            };
-            class ContusionMinor: Contusion {};
-            class ContusionMedium: Contusion {};
-            class ContusionLarge: Contusion {};
-
-            // Standard efficiency
-            class Crush: StandardEff {};
-            class CrushMinor: StandardEffMinor {};
-            class CrushMedium: StandardEffMedium {};
-            class CrushLarge: StandardEffLarge {};
-
-            // Standard efficiency
-            class Cut: StandardEff {};
-            class CutMinor: StandardEffMinor {};
-            class CutMedium: StandardEffMedium {};
-            class CutLarge: StandardEffLarge {};
-
-            // Standard efficiency
-            class Laceration: StandardEff {};
-            class LacerationMinor: StandardEffMinor {};
-            class LacerationMedium: StandardEffMedium {};
-            class LacerationLarge: StandardEffLarge {};
-
             // Super efficiency
             class VelocityWound: SuperEff {};
             class VelocityWoundMinor: SuperEffMinor {};
