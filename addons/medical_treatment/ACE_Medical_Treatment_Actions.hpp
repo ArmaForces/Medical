@@ -14,6 +14,16 @@ class ACEGVAR(medical_treatment,actions) {
         treatmentTime = 5;
     };
 
+    class Morphine;
+    class Apap: Morphine {
+        allowedSelections[] = {"head"};
+        displayName = CSTRING(Inject_Apap);
+        displayNameProgress = CSTRING(Injecting_Apap);
+        items[] = {"ACE_apap"};
+        condition = "!((_this select 1) getVariable ['ACE_isUnconscious', false])";
+        litter[] = { {"All", "", {"ACE_MedicalLitter_apap"}} };
+    };
+
     class BloodIV: BasicBandage {
         treatmentTime = 5;
     };
