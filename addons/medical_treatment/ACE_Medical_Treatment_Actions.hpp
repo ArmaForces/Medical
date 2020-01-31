@@ -19,9 +19,9 @@ class ACEGVAR(medical_treatment,actions) {
         allowedSelections[] = {"head"};
         displayName = CSTRING(Inject_Apap);
         displayNameProgress = CSTRING(Injecting_Apap);
-        items[] = {"ACE_apap"};
+        items[] = {"AFMED_apap"};
         condition = "!((_this select 1) getVariable ['ACE_isUnconscious', false])";
-        litter[] = { {"All", "", {"ACE_MedicalLitter_apap"}} };
+        litter[] = { {"All", "", {"AFMED_MedicalLitter_apap"}} };
     };
 
     class BloodIV: BasicBandage {
