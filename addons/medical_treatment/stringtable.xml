@@ -18,13 +18,21 @@
             <Polish></Polish>
         </Key>
         -->
-        <Key ID="STR_AFMED_Medical_Treatment_Inject_Apap">
+        <Key ID="STR_AFMED_Medical_Treatment_Eat_Apap">
             <English>Eat Apap</English>
             <Polish>Zjedz Apap</Polish>
         </Key>
-        <Key ID="STR_AFMED_Medical_Treatment_Injecting_Apap">
+        <Key ID="STR_AFMED_Medical_Treatment_Eating_Apap">
             <English>Eating Apap...</English>
             <Polish>Zjadanie Apapu...</Polish>
+        </Key>
+        <Key ID="STR_AFMED_Medical_Treatment_Administer_Apap">
+            <English>Administer Apap</English>
+            <Polish>Podaj Apap</Polish>
+        </Key>
+        <Key ID="STR_AFMED_Medical_Treatment_Administering_Apap">
+            <English>Administering Apap...</English>
+            <Polish>Podawanie Apapu...</Polish>
         </Key>
     </Package>
 </Project>
