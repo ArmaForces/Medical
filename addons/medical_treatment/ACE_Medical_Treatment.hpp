@@ -10,50 +10,7 @@ class ACE_ADDON(medical_treatment) {
             reopeningMinDelay = 0;
             reopeningMaxDelay = 0;
 
-            // The best choice for given wound
-            class SuperEff {
-                effectiveness = 10;
-                reopeningChance = 0.1;
-                reopeningMinDelay = 600;
-                reopeningMaxDelay = 1800;
-            };
-            class SuperEffMinor: SuperEff {};
-            class SuperEffMedium: SuperEff {
-                effectiveness = 9;
-            };
-            class SuperEffLarge: SuperEff {
-                effectiveness = 8;
-            };
 
-            // Will fix you almost like super
-            class IncreasedEff {
-                effectiveness = 6;
-                reopeningChance = 0.3;
-                reopeningMinDelay = 400;
-                reopeningMaxDelay = 1200;
-            };
-            class IncreasedEffMinor: IncreasedEff {};
-            class IncreasedEffMedium: IncreasedEff {
-                effectiveness = 5;
-            };
-            class IncreasedEffLarge: IncreasedEff {
-                effectiveness = 4;
-            };
-
-            // Still 2-3 times more efficiency than default ACE bandages
-            class StandardEff {
-                effectiveness = 4;
-                reopeningChance = 0.4;
-                reopeningMinDelay = 300;
-                reopeningMaxDelay = 600;
-            };
-            class StandardEffMinor: StandardEff {};
-            class StandardEffMedium: StandardEff {
-                effectiveness = 3;
-            };
-            class StandardEffLarge: StandardEff {
-                effectiveness = 2;
-            };
 
             // All wounds with standard efficiency
             class Abrasion: StandardEff {};
