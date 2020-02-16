@@ -326,9 +326,22 @@ class ACE_ADDON(medical_treatment) {
             };
         };
 
-        class ElasticBandage: BasicBandage {
+        class ElasticBandage {
+            class Abrasion {
+                STANDARD_EFF;
+            };
+            class AbrasionMinor: Abrasion {
+                STANDARD_EFF_MINOR;
+            };
+            class AbrasionMedium: Abrasion {
+                STANDARD_EFF_MEDIUM;
+            };
+            class AbrasionLarge: Abrasion {
+                STANDARD_EFF_LARGE;
+            };
+
             // Super efficiency
-            class Avulsion: Abrasion  {
+            class Avulsion: Abrasion {
                 SUPER_EFF;
             };
             class AvulsionMinor: Avulsion {
@@ -364,6 +377,32 @@ class ACE_ADDON(medical_treatment) {
             };
             class CrushLarge: Crush {
                 SUPER_EFF_LARGE;
+            };
+
+            class Cut: Abrasion {
+                STANDARD_EFF;
+            };
+            class CutMinor: Cut {
+                STANDARD_EFF_MINOR;
+            };
+            class CutMedium: Cut {
+                STANDARD_EFF_MEDIUM;
+            };
+            class CutLarge: Cut {
+                STANDARD_EFF_LARGE;
+            };
+
+            class Laceration: Abrasion {
+                STANDARD_EFF;
+            };
+            class LacerationMinor: Laceration {
+                STANDARD_EFF_MINOR;
+            };
+            class LacerationMedium: Laceration {
+                STANDARD_EFF_MEDIUM;
+            };
+            class LacerationLarge: Laceration {
+                STANDARD_EFF_LARGE;
             };
 
             // Increased efficiency
