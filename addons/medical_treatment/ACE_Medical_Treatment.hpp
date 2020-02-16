@@ -217,10 +217,18 @@ class ACE_ADDON(medical_treatment) {
 
         class ElasticBandage: BasicBandage {
             // Super efficiency
-            class Avulsion: SuperEff {};
-            class AvulsionMinor: SuperEffMinor {};
-            class AvulsionMedium: SuperEffMedium {};
-            class AvulsionLarge: SuperEffLarge {};
+            class Avulsion: Abrasion  {
+                SUPER_EFF;
+            };
+            class AvulsionMinor: Avulsion {
+                SUPER_EFF_MINOR;
+            };
+            class AvulsionMedium: Avulsion {
+                SUPER_EFF_MEDIUM;
+            };
+            class AvulsionLarge: Avulsion {
+                SUPER_EFF_LARGE;
+            };
 
             // Super efficiency
             class Contusion: Abrasion {
@@ -234,22 +242,46 @@ class ACE_ADDON(medical_treatment) {
             class ContusionLarge: Contusion {};
 
             // Super efficiency
-            class Crush: SuperEff {};
-            class CrushMinor: SuperEffMinor {};
-            class CrushMedium: SuperEffMedium {};
-            class CrushLarge: SuperEffLarge {};
+            class Crush: Abrasion {
+                SUPER_EFF;
+            };
+            class CrushMinor: Crush {
+                SUPER_EFF_MINOR;
+            };
+            class CrushMedium: Crush {
+                SUPER_EFF_MEDIUM;
+            };
+            class CrushLarge: Crush {
+                SUPER_EFF_LARGE;
+            };
 
             // Increased efficiency
-            class VelocityWound: IncreasedEff {};
-            class VelocityWoundMinor: IncreasedEffMinor {};
-            class VelocityWoundMedium: IncreasedEffMedium {};
-            class VelocityWoundLarge: IncreasedEffLarge {};
+            class VelocityWound: Abrasion {
+                INCREASED_EFF;
+            };
+            class VelocityWoundMinor: VelocityWound {
+                INCREASED_EFF_MINOR;
+            };
+            class VelocityWoundMedium: VelocityWound {
+                INCREASED_EFF_MEDIUM;
+            };
+            class VelocityWoundLarge: VelocityWound {
+                INCREASED_EFF_LARGE;
+            };
 
             // Increased efficiency
-            class PunctureWound: IncreasedEff {};
-            class PunctureWoundMinor: IncreasedEffMinor {};
-            class PunctureWoundMedium: IncreasedEffMedium {};
-            class PunctureWoundLarge: IncreasedEffLarge {};
+            class PunctureWound: Abrasion {
+                INCREASED_EFF;
+            };
+            class PunctureWoundMinor: PunctureWound {
+                INCREASED_EFF_MINOR;
+            };
+            class PunctureWoundMedium: PunctureWound {
+                INCREASED_EFF_MEDIUM;
+            };
+            class PunctureWoundLarge: PunctureWound {
+                 INCREASED_EFF_LARGE;
+            };
         };
 
         class QuikClot: BasicBandage {
