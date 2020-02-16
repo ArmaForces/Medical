@@ -10,20 +10,34 @@ class ACE_ADDON(medical_treatment) {
             reopeningMinDelay = 0;
             reopeningMaxDelay = 0;
 
-
-
             // All wounds with standard efficiency
-            class Abrasion: StandardEff {};
-            class AbrasionMinor: StandardEffMinor {};
-            class AbrasionMedium: StandardEffMedium {};
-            class AbrasionLarge: StandardEffLarge {};
+            class Abrasion {
+                STANDARD_EFF;
+            };
+            class AbrasionMinor: Abrasion {
+                STANDARD_EFF_MINOR;
+            };
+            class AbrasionMedium: Abrasion {
+                STANDARD_EFF_MEDIUM;
+            };
+            class AbrasionLarge: Abrasion {
+                STANDARD_EFF_LARGE;
+            };
 
-            class Avulsion: StandardEff {};
-            class AvulsionMinor: StandardEffMinor {};
-            class AvulsionMedium: StandardEffMedium {};
-            class AvulsionLarge: StandardEffLarge {};
+            class Avulsion: Abrasion  {
+                STANDARD_EFF;
+            };
+            class AvulsionMinor: Avulsion {
+                STANDARD_EFF_MINOR;
+            };
+            class AvulsionMedium: Avulsion {
+                STANDARD_EFF_MEDIUM;
+            };
+            class AvulsionLarge: Avulsion {
+                STANDARD_EFF_LARGE;
+            };
 
-            class Contusion: Standard {
+            class Contusion: Abrasion  {
                 effectiveness = 4;
                 reopeningChance = 0;
                 reopeningMinDelay = 0;
@@ -33,30 +47,70 @@ class ACE_ADDON(medical_treatment) {
             class ContusionMedium: Contusion {};
             class ContusionLarge: Contusion {};
 
-            class Crush: StandardEff {};
-            class CrushMinor: StandardEffMinor {};
-            class CrushMedium: StandardEffMedium {};
-            class CrushLarge: StandardEffLarge {};
+            class Crush: Abrasion {
+                STANDARD_EFF;
+            };
+            class CrushMinor: Crush {
+                STANDARD_EFF_MINOR;
+            };
+            class CrushMedium: Crush {
+                STANDARD_EFF_MEDIUM;
+            };
+            class CrushLarge: Crush {
+                STANDARD_EFF_LARGE;
+            };
 
-            class Cut: StandardEff {};
-            class CutMinor: StandardEffMinor {};
-            class CutMedium: StandardEffMedium {};
-            class CutLarge: StandardEffLarge {};
+            class Cut: Abrasion  {
+                STANDARD_EFF;
+            };
+            class CutMinor: Cut {
+                STANDARD_EFF_MINOR;
+            };
+            class CutMedium: Cut {
+                STANDARD_EFF_MEDIUM;
+            };
+            class CutLarge: Cut {
+                STANDARD_EFF_LARGE;
+            };
 
-            class Laceration: StandardEff {};
-            class LacerationMinor: StandardEffMinor {};
-            class LacerationMedium: StandardEffMedium {};
-            class LacerationLarge: StandardEffLarge {};
+            class Laceration: Abrasion  {
+                STANDARD_EFF;
+            };
+            class LacerationMinor: Laceration {
+                STANDARD_EFF_MINOR;
+            };
+            class LacerationMedium: Laceration {
+                STANDARD_EFF_MEDIUM;
+            };
+            class LacerationLarge: Laceration {
+                STANDARD_EFF_LARGE;
+            };
 
-            class VelocityWound: StandardEff {};
-            class VelocityWoundMinor: StandardEffMinor {};
-            class VelocityWoundMedium: StandardEffMedium {};
-            class VelocityWoundLarge: StandardEffLarge {};
+            class VelocityWound: Abrasion {
+                STANDARD_EFF;
+            };
+            class VelocityWoundMinor: VelocityWound {
+                STANDARD_EFF_MINOR;
+            };
+            class VelocityWoundMedium: VelocityWound {
+                STANDARD_EFF_MEDIUM;
+            };
+            class VelocityWoundLarge: VelocityWound {
+                STANDARD_EFF_LARGE;
+            };
 
-            class PunctureWound: StandardEff {};
-            class PunctureWoundMinor: StandardEffMinor {};
-            class PunctureWoundMedium: StandardEffMedium {};
-            class PunctureWoundLarge: StandardEffLarge {};
+            class PunctureWound: Abrasion {
+                STANDARD_EFF;
+            };
+            class PunctureWoundMinor: PunctureWound {
+                STANDARD_EFF_MINOR;
+            };
+            class PunctureWoundMedium: PunctureWound {
+                STANDARD_EFF_MEDIUM;
+            };
+            class PunctureWoundLarge: PunctureWound {
+                 STANDARD_EFF_LARGE;
+            };
         };
 
         class FieldDressing: BasicBandage {
