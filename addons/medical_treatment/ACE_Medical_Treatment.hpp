@@ -286,16 +286,32 @@ class ACE_ADDON(medical_treatment) {
 
         class QuikClot: BasicBandage {
             // Super efficiency
-            class VelocityWound: SuperEff {};
-            class VelocityWoundMinor: SuperEffMinor {};
-            class VelocityWoundMedium: SuperEffMedium {};
-            class VelocityWoundLarge: SuperEffLarge {};
+            class VelocityWound: Abrasion {
+                SUPER_EFF;
+            };
+            class VelocityWoundMinor: VelocityWound {
+                SUPER_EFF_MINOR;
+            };
+            class VelocityWoundMedium: VelocityWound {
+                SUPER_EFF_MEDIUM;
+            };
+            class VelocityWoundLarge: VelocityWound {
+                SUPER_EFF_LARGE;
+            };
 
             // Super efficiency
-            class PunctureWound: SuperEff {};
-            class PunctureWoundMinor: SuperEffMinor {};
-            class PunctureWoundMedium: SuperEffMedium {};
-            class PunctureWoundLarge: SuperEffLarge {};
+            class PunctureWound: Abrasion {
+                SUPER_EFF;
+            };
+            class PunctureWoundMinor: PunctureWound {
+                SUPER_EFF_MINOR;
+            };
+            class PunctureWoundMedium: PunctureWound {
+                SUPER_EFF_MEDIUM;
+            };
+            class PunctureWoundLarge: PunctureWound {
+                 SUPER_EFF_LARGE;
+            };
         };
     };
 
