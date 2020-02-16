@@ -38,7 +38,7 @@
 #define INCREASED_EFF_BASE \
     reopeningChance = 0.3; \
     reopeningMinDelay = 400; \
-    reopeningMaxDelay = 1200 \
+    reopeningMaxDelay = 1200
 
 #define INCREASED_EFF \
     effectiveness = 6; \
