@@ -115,34 +115,74 @@ class ACE_ADDON(medical_treatment) {
 
         class FieldDressing: BasicBandage {
             // Super efficiency
-            class Abrasion: SuperEff {};
-            class AbrasionMinor: SuperEffMinor {};
-            class AbrasionMedium: SuperEffMedium {};
-            class AbrasionLarge: SuperEffLarge {};
+            class Abrasion {
+                SUPER_EFF;
+            };
+            class AbrasionMinor: Abrasion {
+                SUPER_EFF_MINOR;
+            };
+            class AbrasionMedium: Abrasion {
+                SUPER_EFF_MEDIUM;
+            };
+            class AbrasionLarge: Abrasion {
+                SUPER_EFF_LARGE;
+            };
 
             // Super efficiency
-            class Cut: SuperEff {};
-            class CutMinor: SuperEffMinor {};
-            class CutMedium: SuperEffMedium {};
-            class CutLarge: SuperEffLarge {};
+            class Cut: Abrasion {
+                SUPER_EFF;
+            };
+            class CutMinor: Cut {
+                SUPER_EFF_MINOR;
+            };
+            class CutMedium: Cut {
+                SUPER_EFF_MEDIUM;
+            };
+            class CutLarge: Cut {
+                SUPER_EFF_LARGE;
+            };
 
             // Super efficiency
-            class Laceration: SuperEff {};
-            class LacerationMinor: SuperEffMinor {};
-            class LacerationMedium: SuperEffMedium {};
-            class LacerationLarge: SuperEffLarge {};
+            class Laceration: Abrasion {
+                SUPER_EFF;
+            };
+            class LacerationMinor: Laceration {
+                SUPER_EFF_MINOR;
+            };
+            class LacerationMedium: Laceration {
+                SUPER_EFF_MEDIUM;
+            };
+            class LacerationLarge: Laceration {
+                SUPER_EFF_LARGE;
+            };
 
             // Increased efficiency
-            class VelocityWound: IncreasedEff {};
-            class VelocityWoundMinor: IncreasedEffMinor {};
-            class VelocityWoundMedium: IncreasedEffMedium {};
-            class VelocityWoundLarge: IncreasedEffLarge {};
+            class VelocityWound: Abrasion {
+                INCREASED_EFF;
+            };
+            class VelocityWoundMinor: VelocityWound {
+                INCREASED_EFF_MINOR;
+            };
+            class VelocityWoundMedium: VelocityWound {
+                INCREASED_EFF_MEDIUM;
+            };
+            class VelocityWoundLarge: VelocityWound {
+                INCREASED_EFF_LARGE;
+            };
 
             // Increased efficiency
-            class PunctureWound: IncreasedEff {};
-            class PunctureWoundMinor: IncreasedEffMinor {};
-            class PunctureWoundMedium: IncreasedEffMedium {};
-            class PunctureWoundLarge: IncreasedEffLarge {};
+            class PunctureWound: Abrasion {
+                INCREASED_EFF;
+            };
+            class PunctureWoundMinor: PunctureWound {
+                INCREASED_EFF_MINOR;
+            };
+            class PunctureWoundMedium: PunctureWound {
+                INCREASED_EFF_MEDIUM;
+            };
+            class PunctureWoundLarge: PunctureWound {
+                INCREASED_EFF_LARGE;
+            };
         };
 
         class PackingBandage: BasicBandage {
