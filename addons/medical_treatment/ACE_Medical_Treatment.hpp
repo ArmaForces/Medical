@@ -24,7 +24,7 @@ class ACE_ADDON(medical_treatment) {
                 STANDARD_EFF_LARGE;
             };
 
-            class Avulsion: Abrasion  {
+            class Avulsion: Abrasion {
                 STANDARD_EFF;
             };
             class AvulsionMinor: Avulsion {
@@ -37,7 +37,7 @@ class ACE_ADDON(medical_treatment) {
                 STANDARD_EFF_LARGE;
             };
 
-            class Contusion: Abrasion  {
+            class Contusion: Abrasion {
                 effectiveness = 4;
                 reopeningChance = 0;
                 reopeningMinDelay = 0;
@@ -60,7 +60,7 @@ class ACE_ADDON(medical_treatment) {
                 STANDARD_EFF_LARGE;
             };
 
-            class Cut: Abrasion  {
+            class Cut: Abrasion {
                 STANDARD_EFF;
             };
             class CutMinor: Cut {
@@ -73,7 +73,7 @@ class ACE_ADDON(medical_treatment) {
                 STANDARD_EFF_LARGE;
             };
 
-            class Laceration: Abrasion  {
+            class Laceration: Abrasion {
                 STANDARD_EFF;
             };
             class LacerationMinor: Laceration {
@@ -113,7 +113,7 @@ class ACE_ADDON(medical_treatment) {
             };
         };
 
-        class FieldDressing: BasicBandage {
+        class FieldDressing {
             // Super efficiency
             class Abrasion {
                 SUPER_EFF;
@@ -126,6 +126,42 @@ class ACE_ADDON(medical_treatment) {
             };
             class AbrasionLarge: Abrasion {
                 SUPER_EFF_LARGE;
+            };
+
+            class Avulsion: Abrasion {
+                STANDARD_EFF;
+            };
+            class AvulsionMinor: Avulsion {
+                STANDARD_EFF_MINOR;
+            };
+            class AvulsionMedium: Avulsion {
+                STANDARD_EFF_MEDIUM;
+            };
+            class AvulsionLarge: Avulsion {
+                STANDARD_EFF_LARGE;
+            };
+
+            class Contusion: Abrasion {
+                effectiveness = 4;
+                reopeningChance = 0;
+                reopeningMinDelay = 0;
+                reopeningMaxDelay = 0;
+            };
+            class ContusionMinor: Contusion {};
+            class ContusionMedium: Contusion {};
+            class ContusionLarge: Contusion {};
+
+            class Crush: Abrasion {
+                STANDARD_EFF;
+            };
+            class CrushMinor: Crush {
+                STANDARD_EFF_MINOR;
+            };
+            class CrushMedium: Crush {
+                STANDARD_EFF_MEDIUM;
+            };
+            class CrushLarge: Crush {
+                STANDARD_EFF_LARGE;
             };
 
             // Super efficiency
