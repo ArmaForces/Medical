@@ -434,7 +434,82 @@ class ACE_ADDON(medical_treatment) {
             };
         };
 
-        class QuikClot: BasicBandage {
+        class QuikClot {
+            class Abrasion {
+                STANDARD_EFF;
+            };
+            class AbrasionMinor: Abrasion {
+                STANDARD_EFF_MINOR;
+            };
+            class AbrasionMedium: Abrasion {
+                STANDARD_EFF_MEDIUM;
+            };
+            class AbrasionLarge: Abrasion {
+                STANDARD_EFF_LARGE;
+            };
+
+            class Avulsion: Abrasion {
+                STANDARD_EFF;
+            };
+            class AvulsionMinor: Avulsion {
+                STANDARD_EFF_MINOR;
+            };
+            class AvulsionMedium: Avulsion {
+                STANDARD_EFF_MEDIUM;
+            };
+            class AvulsionLarge: Avulsion {
+                STANDARD_EFF_LARGE;
+            };
+
+            class Contusion: Abrasion {
+                effectiveness = 4;
+                reopeningChance = 0;
+                reopeningMinDelay = 0;
+                reopeningMaxDelay = 0;
+            };
+            class ContusionMinor: Contusion {};
+            class ContusionMedium: Contusion {};
+            class ContusionLarge: Contusion {};
+
+            class Crush: Abrasion {
+                STANDARD_EFF;
+            };
+            class CrushMinor: Crush {
+                STANDARD_EFF_MINOR;
+            };
+            class CrushMedium: Crush {
+                STANDARD_EFF_MEDIUM;
+            };
+            class CrushLarge: Crush {
+                STANDARD_EFF_LARGE;
+            };
+
+            class Cut: Abrasion {
+                STANDARD_EFF;
+            };
+            class CutMinor: Cut {
+                STANDARD_EFF_MINOR;
+            };
+            class CutMedium: Cut {
+                STANDARD_EFF_MEDIUM;
+            };
+            class CutLarge: Cut {
+                STANDARD_EFF_LARGE;
+            };
+
+            class Laceration: Abrasion {
+                STANDARD_EFF;
+            };
+            class LacerationMinor: Laceration {
+                STANDARD_EFF_MINOR;
+            };
+            class LacerationMedium: Laceration {
+                STANDARD_EFF_MEDIUM;
+            };
+            class LacerationLarge: Laceration {
+                STANDARD_EFF_LARGE;
+            };
+
             // Super efficiency
             class VelocityWound: Abrasion {
                 SUPER_EFF;
