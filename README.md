@@ -44,6 +44,21 @@ Huge appreciation and thanks to [ACE3 Team](http://ace3mod.com/team.html) for th
   - A bit weaker than morphine
   - Only for conscious units
 
+## Bandages efficiency table
+
+`++` = Super | `+` = Increased | None = Standard
+
+|    Wound   | Field Dressing | Elastic | Packing | QuikClot |
+|:----------:|:--------------:|:-------:|:-------:|:--------:|
+|  Abrasion  |       ++       |         |         |          |
+|  Avulsion  |                |    ++   |         |          |
+|  Contusion |                |    ++   |         |          |
+|    Crush   |                |    ++   |         |          |
+|     Cut    |       ++       |         |         |          |
+| Laceration |       ++       |         |         |          |
+|  Velocity  |        +       |    +    |    ++   |    ++    |
+|  Puncture  |        +       |    +    |    ++   |    ++    |
+
 ## Setup
 
 ### Requirements
