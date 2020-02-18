@@ -30,6 +30,19 @@ Huge appreciation and thanks to [ACE3 Team](http://ace3mod.com/team.html) for th
   - Removing Tourniquet 7 -> 1.5 s
   - Splint 7 -> 5 s
   - IV 12 -> 5 s
+- Reworked bandages
+  - All bandages are at least 2-3 times more efficient than in standard ACE
+  - 3 types of efficiency (standard ACE bandages are maximum at 2)
+    - Super - 10-8 base efficiency
+    - Increased - 6-4 base efficiency
+    - Standard - 2-4 base efficiency
+  - Much longer wound opening times, especially for super efficiency
+    - Super - 10% opening chance, 10-30 minutes durability
+    - Increased - 30% opening chance, 6-20 minutes
+    - Standard - 40% opening chance, 5-10 minutes
+- Pain fighting medication (Apap) without side effects
+  - A bit weaker than morphine
+  - Only for conscious units
 
 ## Setup
 
