@@ -1,6 +1,6 @@
 class ACEGVAR(medical_treatment,actions) {
     class BasicBandage {
-        treatmentTime = QUOTE(call ACEFUNC(medical_treatment,getBandageTime) / 2);
+        treatmentTime = QUOTE(call ACEFUNC(medical_treatment,getBandageTime));
     };
 
     class ApplyTourniquet: BasicBandage {

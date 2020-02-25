@@ -25,7 +25,6 @@ Huge appreciation and thanks to [ACE3 Team](http://ace3mod.com/team.html) for th
 # Overwiew
 
 - Decreased treatment times
-  - Bandaging time / 2
   - Applying Tourniquet 7 -> 2.5 s
   - Removing Tourniquet 7 -> 1.5 s
   - Splint 7 -> 5 s
