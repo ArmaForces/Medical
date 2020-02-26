@@ -2,7 +2,7 @@ class CfgVehicles {
     // Apap litter
     class Leaflet_05_F;
     class AFMED_MedicalLitter_apap: Leaflet_05_F {
-        hiddenSelectionsTextures[] = {"\armaforces\medical\data\apap_litter.paa"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\apap_litter.paa)};
     };
 
     // Apap item
