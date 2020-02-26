@@ -20,6 +20,7 @@ class ACEGVAR(medical_treatment,actions) {
         allowSelfTreatment = 1;
         displayName = CSTRING(Eat_Apap);
         displayNameProgress = CSTRING(Eating_Apap);
+        icon = QPATHTOF(ui\icons\apap.paa);
         items[] = {"AFMED_apap"};
         condition = "(_this select 1) isEqualTo player";
         litter[] = { {"All", "", {"AFMED_MedicalLitter_apap"}} };
