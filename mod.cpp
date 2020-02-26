@@ -6,4 +6,4 @@ action = "https://armaforces.com/";
 actionName = "Website";
 tooltip = "ArmaForces Medical";
 description = "ArmaForces Medical developed by 3Mydlo3.";
-logo = "\z\afmed\main\data\logo_ca.paa";
+logo = "\z\afmed\addons\main\data\logo_ca.paa";
