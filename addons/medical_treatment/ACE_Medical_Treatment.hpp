@@ -499,6 +499,7 @@ class ACE_ADDON(medical_treatment) {
         };
         class Apap: PainKillers {
             painReduce = 0.6;
+            timeInSystem = 1200;
             timeTillMaxEffect = 120;
         };
     };
