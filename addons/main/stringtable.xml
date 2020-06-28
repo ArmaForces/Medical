@@ -11,5 +11,8 @@
         <Key ID="STR_AFMED_Main_Toolbar">
             <English>Medical</English>
         </Key>
+        <Key ID="STR_AFMED_Main_SettingsCategory">
+            <English>ArmaForces - Medical</English>
+        </Key>
     </Package>
 </Project>
