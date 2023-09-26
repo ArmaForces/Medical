@@ -3,8 +3,6 @@ addons/*.pbo
 
 # Releases
 releases/*
-hemtt
-hemtt.exe
 symbols/*
 
 # Bikey
